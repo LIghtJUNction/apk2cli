@@ -41,7 +41,10 @@ class E2EServerTests(unittest.TestCase):
     def rejected(self, path, *, credentials=None, token=None):
         with self.assertRaises(urllib.error.HTTPError) as failure:
             self.request(path, credentials=credentials, token=token)
-        self.assertEqual(failure.exception.code, 401)
+        try:
+            self.assertEqual(failure.exception.code, 401)
+        finally:
+            failure.exception.close()
 
     def test_fixture_requires_login_and_recognizes_revocation(self):
         self.rejected("/me")

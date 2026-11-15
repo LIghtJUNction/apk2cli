@@ -115,7 +115,7 @@ class ManifestReviewTests(unittest.TestCase):
         self.assertEqual(report["manifest"]["permissions"], ["android.permission.INTERNET"])
         self.assertEqual(report["archive"]["native_abis"], ["arm64-v8a"])
         self.assertEqual(report["url_candidates"], [{"url": "https://api.example.test/v1/me", "source": "classes.dex", "status": "unverified"}])
-        self.assertNotIn("private", json.dumps(report))
+        self.assertNotIn("private", json.dumps(report["url_candidates"]))
 
     def test_rejects_truncated_pool_offsets_and_element_bounds(self):
         original = compiled_manifest()

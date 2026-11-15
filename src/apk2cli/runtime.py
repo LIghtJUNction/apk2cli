@@ -120,6 +120,9 @@ def run(spec_path: Path | str, argv: list[str] | None = None) -> int:
     except Apk2CliError as exc:
         emit({"error": {"code": exc.code, "message": exc.message}}, file=sys.stderr)
         return 1
+    except OSError:
+        emit({"error": {"code": "filesystem_error", "message": "Cannot access the local session directory. Check its path, permissions and available disk space."}}, file=sys.stderr)
+        return 1
     except KeyboardInterrupt:
         emit({"error": {"code": "interrupted", "message": "Operation interrupted."}}, file=sys.stderr)
         return 130

@@ -27,7 +27,7 @@ work_dir="$(mktemp -d)"
 trap 'rm -rf "$work_dir"' EXIT
 mkdir -p "$work_dir/classes" "$work_dir/dex"
 
-javac -source 8 -target 8 -bootclasspath "$android_jar" \
+javac --release 8 -classpath "$android_jar" \
   -d "$work_dir/classes" \
   "$repo_root/examples/android-demo/src/dev/apk2cli/demo/MainActivity.java"
 mapfile -t class_files < <(find "$work_dir/classes" -name '*.class' -type f | sort)
