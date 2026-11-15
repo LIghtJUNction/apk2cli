@@ -66,7 +66,7 @@ class BuilderTests(unittest.TestCase):
         for name in ("references.md", "specification.md", "mcp.example.json"):
             self.assertTrue((output / "docs" / name).is_file())
         data = json.loads((output / "workspace.json").read_text())
-        self.assertEqual(data["apk"], str(self.apk))
+        self.assertTrue(Path(data["apk"]).samefile(self.apk))
         self.assertEqual(data["apk_sha256"], inspect_apk(self.apk)["apk"]["sha256"])
         self.assertFalse((output / "app.json").exists())
 
