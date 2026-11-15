@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-11-15T10:15:15.506906+00:00",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "inspect_compiled_binary_manifest_apk",
+      "status": "passed"
+    },
+    {
+      "name": "build_standalone_cli",
+      "status": "passed"
+    },
+    {
+      "name": "api_requires_imported_session",
+      "status": "passed"
+    },
+    {
+      "name": "sign_in_through_android_app_ui_and_http",
+      "status": "passed"
+    },
+    {
+      "name": "auth_verifies_app_session_before_saving",
+      "status": "passed"
+    },
+    {
+      "name": "auth_adb_imports_existing_app_session_without_root",
+      "status": "passed"
+    },
+    {
+      "name": "generated_commands_use_authenticated_real_http",
+      "status": "passed"
+    },
+    {
+      "name": "status_keeps_private_session_value_redacted",
+      "status": "passed"
+    },
+    {
+      "name": "revoked_session_fails_authenticated_request",
+      "status": "passed"
+    },
+    {
+      "name": "logout_removes_local_session",
+      "status": "passed"
+    },
+    {
+      "name": "app_remains_logged_in_after_cli_logout",
+      "status": "passed"
+    },
+    {
+      "name": "non_debuggable_app_rejects_unprivileged_session_import",
+      "status": "passed"
+    }
+  ],
+  "device": {
+    "kind": "android_emulator",
+    "api_level": "35",
+    "adb_shell_uid": "2000"
+  },
+  "server": {
+    "app_login_count": 1,
+    "authenticated_requests": 4
+  },
+  "finished_at": "2026-11-15T10:15:34.904019+00:00"
+}

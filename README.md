@@ -114,7 +114,7 @@ python scripts/android_e2e.py \
   --screenshot build/android-e2e.png
 ```
 
-测试报告分别标注本地自动测试、真实 Android 模拟器和实体手机；运行结果以 [GitHub Actions](https://github.com/LIghtJUNction/apk2cli/actions) 和保留的证据为准。
+测试报告分别标注本地自动测试、真实 Android 模拟器和实体手机。已完成的结果见 [2026-11-15 验收报告](docs/verification-2026-11-15.md)及 [GitHub Actions](https://github.com/LIghtJUNction/apk2cli/actions)。
 
 ## 开发约定
 
