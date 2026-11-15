@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apk2cli"
+version = "0.1.0"
+description = "Evidence-driven APK-to-CLI workflows with verified ADB session import"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "LIghtJUNction"}]
+dependencies = []
+
+[project.scripts]
+apk2cli = "apk2cli.cli:main"
+
+[project.urls]
+Source = "https://github.com/LIghtJUNction/apk2cli"
+Issues = "https://github.com/LIghtJUNction/apk2cli/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+apk2cli = ["resources/**/*"]

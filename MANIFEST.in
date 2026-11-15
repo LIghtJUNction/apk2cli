@@ -1,0 +1,3 @@
+recursive-include .agents/skills *
+recursive-include docs *.md *.json
+include LICENSE

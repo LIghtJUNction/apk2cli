@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inspect an APK"
+  short_description: "Trace Android behavior from APK evidence"
+  default_prompt: "Use $inspect-apk to identify this APK and trace its authentication and API behavior."

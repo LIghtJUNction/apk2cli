@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify ADB authentication"
+  short_description: "Verify session import against a connected app"
+  default_prompt: "Use $verify-adb-auth to test this generated CLI against a logged-in Android app through ADB."

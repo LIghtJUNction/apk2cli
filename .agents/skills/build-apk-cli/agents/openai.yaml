@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build an APK CLI"
+  short_description: "Turn evidenced Android operations into a CLI"
+  default_prompt: "Use $build-apk-cli to build a named CLI with auth --adb from the analyzed APK."
